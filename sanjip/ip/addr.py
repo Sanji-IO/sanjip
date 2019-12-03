@@ -191,20 +191,20 @@ def ifconfig(iface, dhcpc, ip="", netmask="24", gateway="", script=None):
 
 
 if __name__ == "__main__":
-    print interfaces()
+    print(interfaces())
 
     # ifconfig("eth0", True)
     # dhclient("eth0", False)
     # time.sleep(10)
     # ifconfig("eth1", False, "192.168.31.36")
     eth0 = ifaddresses("eth0")
-    print eth0
-    print "link: %d" % eth0["link"]
+    print(eth0)
+    print("link: %d" % eth0["link"])
     for ip in eth0["inet"]:
-        print "ip: %s" % ip["ip"]
-        print "netmask: %s" % ip["netmask"]
+        print("ip: %s" % ip["ip"])
+        print("netmask: %s" % ip["netmask"])
         if "subnet" in ip:
-            print "subnet: %s" % ip["subnet"]
+            print("subnet: %s" % ip["subnet"])
 
     '''
     ifupdown("eth1", True)
