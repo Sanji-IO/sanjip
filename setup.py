@@ -10,7 +10,7 @@ def read(*paths):
 
 setuptools.setup(
     name="sanjip",
-    version="0.1.1",
+    version="0.2.0",
     author="Sanji Team",
     author_email="sanji@moxa.com",
     description="Sanji Bundle IP Module",
