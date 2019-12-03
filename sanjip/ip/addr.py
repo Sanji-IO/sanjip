@@ -19,7 +19,7 @@ import logging
 #   https://pypi.python.org/pypi/sh
 
 
-_logger = logging.getLogger("sanji.ethernet.ip.addr")
+_logger = logging.getLogger("sanjip.ip.addr")
 
 
 def interfaces():
