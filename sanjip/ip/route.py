@@ -2,6 +2,7 @@
 # -*- coding: UTF-8 -*-
 
 import sh
+import six
 
 
 def add(dest, dev="", src="", nexthop=None):
@@ -34,7 +35,7 @@ def add(dest, dev="", src="", nexthop=None):
             param = ["route", "add", dest]
             for nh in nexthop:
                 param.append("nexthop")
-                for k, v in nh.iteritems():
+                for k, v in six.iteritems(nh):
                     param.extend([k, v])
             sh.ip(*param)
         elif dev:
